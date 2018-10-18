@@ -3,7 +3,7 @@ import java.net.InetAddress;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
-public class NetRcon
+public class Rcon
 {
 	private InetAddress ipAddress;
 	
@@ -21,7 +21,7 @@ public class NetRcon
 	private DatagramPacket dataPacketIn;
 	
 
-	public NetRcon(String ip, int port, String password, boolean returnsData, int receiveTimeout, int sleepTimer) throws IOException
+	public Rcon(String ip, int port, String password, boolean returnsData, int receiveTimeout, int sleepTimer) throws IOException
 	{
 		this.port = port;
 		this.password = password;
