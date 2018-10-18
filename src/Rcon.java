@@ -50,7 +50,7 @@ public class Rcon
 	{
 		// Build the command string to be sent
 		// The leading Xs are place holders for out of bounds bytes that will be converted once we get the java bytes for the string
-		command = "xxxxx" + password + " " + rconCommand;
+		command = "xxxx" + "rcon " + password + " " + rconCommand;
 		
 		// Convert the command string to bytes
 		byte[] commandBytes = command.getBytes();
@@ -60,7 +60,7 @@ public class Rcon
 		commandBytes[1] = (byte)0xff;
 		commandBytes[2] = (byte)0xff;
 		commandBytes[3] = (byte)0xff;
-		commandBytes[4] = (byte)0x00;
+		//commandBytes[4] = (byte)0x00;
 
 		
 		// Build the UDP packet that is to be sent
